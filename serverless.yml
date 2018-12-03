@@ -36,6 +36,17 @@ functions:
     environment:
       restaurants_table: restaurants
 
+  search-restaurants:
+    handler: functions/search-restaurants.handler
+    events:
+      - http: 
+          path: /restaurants/search
+          method: post
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-1:453182541509:userpool/us-east-1_5fuCj1lCc
+    environment:
+      restaurants_table: restaurants
+      
 resources:
   Resources:
     restaurantsTable:
