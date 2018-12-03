@@ -27,6 +27,7 @@ module.exports.handler = co.wrap (function * (event, context, callback) {
   let restaurants = yield getRestaurants();
   let dayOfWeek = days[new Date().getDay()];
   let html = Mustache.render(template, { dayOfWeek, restaurants });
+  
   const response =  {
     statusCode: 200,
     body: html,
