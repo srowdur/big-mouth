@@ -26,6 +26,8 @@ functions:
           method: get
     environment:
       restaurants_api: https://gkpw0c8evl.execute-api.us-east-1.amazonaws.com/dev/restaurants
+      cognito_user_pool_id: 'us-east-1_5fuCj1lCc'
+      cognito_client_id: '4qkt1dskelgnsnqemh6pmirp3k'
   get-restaurants:
     handler: functions/get-restaurants.handler
     events:
